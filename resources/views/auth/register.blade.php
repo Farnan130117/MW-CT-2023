@@ -40,6 +40,23 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="account_type" class="col-md-4 col-form-label text-md-end">{{ __('Account Type') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="account_type" class="form-control @error('account_type') is-invalid @enderror" name="account_type" required>
+                                    <option value="Individual" {{ old('account_type') == 'Individual' ? 'selected' : '' }}>Individual</option>
+                                    <option value="Business" {{ old('account_type') == 'Business' ? 'selected' : '' }}>Business</option>
+                                </select>
+
+                                @error('account_type')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

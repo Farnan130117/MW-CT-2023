@@ -27,6 +27,16 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                Dashboard
+                </a>
+                <a class="navbar-brand" href="{{ route('deposits') }}">
+                Deposit
+                </a>
+                <a class="navbar-brand" href="{{ route('withdrawals') }}">
+                Withdrawals
+                </a>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
